@@ -8,71 +8,32 @@ export default function Skills() {
         <div className="underline"></div>
 
         <p className="skills-desc">
-          Full-Stack Engineer with 5+ years experience building scalable SaaS
-          applications using modern web technologies.
+          Backend-focused full-stack engineer building scalable SaaS
+          applications and APIs using modern web technologies.
         </p>
 
         <div className="skills-grid">
-          {/* LEFT */}
-          <div className="skill-item">
-            <div className="skill-header">
-              <span>React / Next.js</span>
-              <span>95%</span>
-            </div>
-            <div className="progress">
-              <div className="progress-bar" style={{ width: "95%" }}></div>
-            </div>
+          
+          <div className="skill-category">
+            <h3>Frontend</h3>
+            <p>React • Next.js • TypeScript • Tailwind CSS</p>
           </div>
 
-          <div className="skill-item">
-            <div className="skill-header">
-              <span>TypeScript</span>
-              <span>90%</span>
-            </div>
-            <div className="progress">
-              <div className="progress-bar" style={{ width: "90%" }}></div>
-            </div>
+          <div className="skill-category">
+            <h3>Backend</h3>
+            <p>Node.js • Express • Spring Boot • REST APIs • Authentication (JWT)</p>
           </div>
 
-          <div className="skill-item">
-            <div className="skill-header">
-              <span>Node.js / Express</span>
-              <span>88%</span>
-            </div>
-            <div className="progress">
-              <div className="progress-bar" style={{ width: "88%" }}></div>
-            </div>
+          <div className="skill-category">
+            <h3>Database</h3>
+            <p>MySQL • PostgreSQL • MongoDB • SQL Optimization</p>
           </div>
 
-          <div className="skill-item">
-            <div className="skill-header">
-              <span>Laravel / PHP</span>
-              <span>85%</span>
-            </div>
-            <div className="progress">
-              <div className="progress-bar" style={{ width: "85%" }}></div>
-            </div>
+          <div className="skill-category">
+            <h3>Dev & Infrastructure</h3>
+            <p>Docker • Git • AWS (EC2, S3) • System Design</p>
           </div>
 
-          <div className="skill-item">
-            <div className="skill-header">
-              <span>MySQL / MongoDB</span>
-              <span>85%</span>
-            </div>
-            <div className="progress">
-              <div className="progress-bar" style={{ width: "85%" }}></div>
-            </div>
-          </div>
-
-          <div className="skill-item">
-            <div className="skill-header">
-              <span>Tailwind / UI Design</span>
-              <span>90%</span>
-            </div>
-            <div className="progress">
-              <div className="progress-bar" style={{ width: "90%" }}></div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

@@ -4,30 +4,44 @@ export default function Resume() {
   return (
     <section id="resume" className="resume">
       <div className="resume-container">
-        <h2 className="section-title">Resume</h2>
+        <h2 className="section-title">Experience</h2>
         <div className="underline"></div>
-
-        <p className="resume-desc">
-          Senior Full-Stack Engineer with 5+ years of experience building scalable
-          web applications and SaaS platforms using modern technologies.
-        </p>
 
         <div className="resume-grid">
 
           {/* LEFT COLUMN */}
           <div className="resume-left">
+
             <h2 className="resume-subtitle">Summary</h2>
 
             <div className="resume-item">
               <h3>Joana Kelly</h3>
-              <p style = {{marginTop: '7px'}}>
-                I build and support production web applications used by over 1,000 active users. I work across frontend
-                and backend and take ownership of the systems I ship, staying involved to ensure they remain stable and
-                maintainable over time. I care about delivering features that teams and users can depend on.
+
+              <p style={{ marginTop: "7px" }}>
+                Backend-focused full-stack engineer with 5+ years of experience
+                building and scaling production SaaS applications. Experienced
+                in designing reliable REST APIs, optimizing SQL performance,
+                and maintaining systems used by 1,000+ active users.
               </p>
+
               <ul>
-                <li>Raleigh, NC, United States</li>
-                <li>joana0713kelly@outlook.com</li>
+                <li>Open to Remote Opportunities</li>
+
+                <li>
+                  <a href="mailto:joana0713kelly@outlook.com">
+                    joana0713kelly@outlook.com
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://github.com/joana0713"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    github.com/joana0713
+                  </a>
+                </li>
               </ul>
             </div>
 
@@ -36,19 +50,13 @@ export default function Resume() {
 
             <div className="resume-item">
               <h3>BSc Computer Science</h3>
-              <span className="resume-date">North Carolina State University</span>
+              <span className="resume-date">
+                North Carolina State University
+              </span>
               <p>
-                Strong foundation in algorithms, data structures, software architecture,
-                and database systems.
-              </p>
-            </div>
-
-            <div className="resume-item">
-              <h3>Advanced Web Development</h3>
-              <span className="resume-date">Self-driven Professional Development</span>
-              <p>
-                Focused on modern full-stack architecture, scalable systems,
-                and cloud-ready applications.
+                Focused on software engineering fundamentals including system
+                design, algorithms, database systems, and scalable web
+                architecture.
               </p>
             </div>
 
@@ -60,22 +68,62 @@ export default function Resume() {
             <h2 className="resume-subtitle">Professional Experience</h2>
 
             <div className="resume-item">
-              <h3>Senior Full-Stack Developer</h3>
-              <span className="resume-date">Remote · 2022 - Present</span>
+              <h3>Full-Stack Engineer (Backend Focus)</h3>
+              <span className="resume-date">
+                Nordic Digital Systems · Remote · 2024 – Present
+              </span>
+
               <ul>
-                <li>Built scalable SaaS applications using React, Next.js, Node.js</li>
-                <li>Designed REST APIs and optimized database performance</li>
-                <li>Improved application performance by 30% through refactoring</li>
+                <li>
+                  Designed and maintained scalable REST APIs using Node.js
+                  supporting 1,000+ active SaaS users
+                </li>
+                <li>
+                  Improved API performance through SQL query optimization and
+                  indexing strategies
+                </li>
+                <li>
+                  Implemented secure authentication using JWT and RBAC
+                </li>
+                <li>
+                  Containerized backend services with Docker for consistent
+                  development and deployment
+                </li>
+                <li>
+                  Integrated payment and analytics APIs supporting core product
+                  operations
+                </li>
               </ul>
             </div>
 
+
             <div className="resume-item">
-              <h3>Full-Stack Developer</h3>
-              <span className="resume-date">2019 - 2022</span>
+              <h3>Full-Stack Engineer</h3>
+              <span className="resume-date">
+                TechNova Solutions · 2021 – 2023
+              </span>
+
               <ul>
-                <li>Developed enterprise-level applications using Laravel & MySQL</li>
-                <li>Integrated third-party APIs and payment systems</li>
-                <li>Collaborated with cross-functional teams in Agile environment</li>
+                <li>
+                  Built and maintained multiple production web applications
+                  using Node.js, Laravel, and React
+                </li>
+                <li>
+                  Reduced API latency from ~600ms to ~320ms through SQL
+                  optimization
+                </li>
+                <li>
+                  Designed REST APIs with authentication, validation, and
+                  structured error handling
+                </li>
+                <li>
+                  Refactored backend modules to improve scalability and
+                  maintainability
+                </li>
+                <li>
+                  Dockerized services to standardize staging and development
+                  environments
+                </li>
               </ul>
             </div>
 

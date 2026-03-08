@@ -8,9 +8,9 @@ import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
 
 const roles = [
-  "Software Engineer",
-  "Full-Stack Developer",
-  "React Engineer"
+  "Backend-Focused Full-Stack Engineer",
+  "Backend Engineer for Scalable SaaS Systems",
+  "Full-Stack Engineer Specializing in Backend Systems"
 ];
 
 export default function Home() {
@@ -39,6 +39,12 @@ export default function Home() {
   return (
     <>
       <section id="home" className="hero">
+        <div className="top-bar">
+          <a href="/resume.pdf" download className="resume-btn">
+            Download CV
+          </a>
+        </div>
+        
         <div className="overlay">
           <div className="hero-content">
             <h1 className="hero-name">Joana Kelly</h1>
@@ -62,21 +68,21 @@ export default function Home() {
               </div>
 
               <div className="about-info">
-                <h3 style = {{marginBottom: '45px'}}>Software Engineer | Full-Stack Engineer.</h3>
+                <h3 style = {{marginBottom: '45px'}}>Full-Stack Engineer | Strong Backend Focus</h3>
 
                 <div className="info-grid">
-                  <p><strong>Birthday:</strong> 13 July 1998</p>
-                  <p><strong>Age:</strong> 27</p>
+                  <p><strong>Location:</strong> Turku, Finland</p>
                   {/* <p><strong>Website:</strong> joanakelly.dev</p> */}
-                  <p><strong>Degree:</strong> BSc Computer Science</p>
-                  {/* <p><strong>Phone:</strong> +1 000 000 000</p> */}
+                  <p><strong>Work:</strong> Remote / Freelance Available</p>
                   <p><strong>Email:</strong> joana0713kelly@outlook.com</p>
-                  <p><strong>City:</strong> United State</p>
-                  <p><strong>Freelance:</strong> Available</p>
+                  <p><strong>GitHub:</strong> <a href = 'https://github.com/fullstackDev0404' target="_blank">github.com/fullstackDev0404</a></p>
+                  {/* <p><strong>Phone:</strong> +381 621 45 1077</p> */}
+                  <p><strong>Degree:</strong> BSc Computer Science</p>
+                  <p><strong>Focus:</strong> Backend Systems & Scalable SaaS</p>
                 </div>
 
                 <p className="about-text">
-                  Full-stack developer working on production web applications across frontend and backend. Experienced with React, Node.js, and database-backed systems. I aim to ship features that are stable, maintainable, and ready for real users.
+                  Backend-focused full-stack engineer building scalable web applications and APIs. Experienced with Node.js, React, and database-driven systems, with a focus on clean architecture, performance, and real-world product reliability.
                 </p>
               </div>
             </div>

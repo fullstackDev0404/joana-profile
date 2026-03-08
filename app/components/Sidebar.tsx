@@ -7,11 +7,7 @@ import {
   Code,
   FileText,
   ImageIcon,
-  Mail,
-  Github,
-  Linkedin,
-  Twitter,
-  Instagram
+  Mail
 } from "lucide-react";
 
 export default function Sidebar() {
@@ -27,7 +23,6 @@ export default function Sidebar() {
     }
   };
 
-  // ✅ IntersectionObserver 하나만 유지
   useEffect(() => {
     const sections = document.querySelectorAll("section");
 
@@ -47,6 +42,15 @@ export default function Sidebar() {
     return () => observer.disconnect();
   }, []);
 
+  const sidebar_list = [
+    {name: 'Home', active_key: 'home', icon: <Home size={18} />},
+    {name: 'About', active_key: 'about', icon: <User size={18} />},
+    {name: 'Skills', active_key: 'skills', icon: <Code size={18} />},   
+    {name: 'Resume', active_key: 'resume', icon: <FileText size={18} />},
+    {name: 'Portfolio', active_key: 'portfolio', icon: <ImageIcon size={18} />},
+    {name: 'Contact', active_key: 'contact', icon: <Mail size={18} />},
+  ]
+
   return (
     <aside className="sidebar">
         <div className="profile">
@@ -54,65 +58,19 @@ export default function Sidebar() {
             <h2>Joana Kelly</h2>
         </div>
 
-        {/* ✅ Social Icons 추가 */}
-        <div className="social">
-            <a href="https://github.com/" target="_blank">
-            <Github size={18} />
-            </a>
-            <a href="https://linkedin.com/" target="_blank">
-            <Linkedin size={18} />
-            </a>
-            <a href="https://twitter.com/" target="_blank">
-            <Twitter size={18} />
-            </a>
-            <a href="#">
-            <Instagram size={18} />
-            </a>
-        </div>
-
         <nav>
             <ul>
-                <li
-                    className={active === "home" ? "active" : ""}
-                    onClick={() => scrollToSection("home")}
-                >
-                    <Home size={18} /> Home
-                </li>
-
-                <li
-                    className={active === "about" ? "active" : ""}
-                    onClick={() => scrollToSection("about")}
-                >
-                    <User size={18} /> About
-                </li>
-
-                <li
-                    className={active === "skills" ? "active" : ""}
-                    onClick={() => scrollToSection("skills")}
-                >
-                    <Code size={18} /> Skills
-                </li>
-
-                <li
-                    className={active === "resume" ? "active" : ""}
-                    onClick={() => scrollToSection("resume")}
+                {
+                  sidebar_list.map((item:any, index: number) => (
+                    <li
+                        key = {item.active_key + index}
+                        className={active === item.active_key ? "active" : ""}
+                        onClick={() => scrollToSection(item.active_key)}
                     >
-                    <FileText size={18} /> Resume
-                </li>
-
-                <li
-                    className={active === "portfolio" ? "active" : ""}
-                    onClick={() => scrollToSection("portfolio")}
-                    >
-                    <ImageIcon size={18} /> Portfolo
-                </li>
-
-                 <li
-                    className={active === "contact" ? "active" : ""}
-                    onClick={() => scrollToSection("contact")}
-                    >
-                    <Mail size={18} /> Contact
-                </li>
+                        {item.icon} {item.name}
+                    </li>
+                  ))
+                }
             </ul>
         </nav>
     </aside>

@@ -2,39 +2,9 @@
 
 import { useState } from "react";
 import { Search, X, ChevronLeft, ChevronRight } from "lucide-react";
+import { projectDetails } from "../data/projectDetails";
 import Image from "next/image";
 import Link from "next/link";
-
-const projects = [
-  {
-    id: 1,
-    title: "Food Delivery App",
-    category: "mobile",
-    image: [
-      "/portfolio/food-mobile-1.png",
-      "/portfolio/food-mobile-2.png",
-    ],
-  },
-  {
-    id: 2,
-    title: "Hotel Admin Dashboard",
-    category: "web",
-    image: [
-      "/portfolio/hotel-admin-1.png",
-      "/portfolio/hotel-admin-2.png",
-      "/portfolio/hotel-admin-3.png",
-    ],
-  },
-  {
-    id: 3,
-    title: "Industrial B2B Platform",
-    category: "web",
-    image: [
-      "/portfolio/industrial-1.png",
-      "/portfolio/industrial-2.png",
-    ],
-  },
-];
 
 export default function Portfolio() {
   const [filter, setFilter] = useState("all");
@@ -43,8 +13,8 @@ export default function Portfolio() {
 
   const filtered =
     filter === "all"
-      ? projects
-      : projects.filter((p) => p.category === filter);
+      ? projectDetails
+      : projectDetails.filter((p) => p.category === filter);
 
   const openGallery = (images: string[]) => {
     setSelectedImages(images);
@@ -74,19 +44,6 @@ export default function Portfolio() {
     <section id="portfolio" className="portfolio">
       <h2 className="section-title">Portfolio</h2>
 
-      {/* FILTER */}
-      <div className="portfolio-filter">
-        {["all", "web", "mobile"].map((cat) => (
-          <button
-            key={cat}
-            className={filter === cat ? "active" : ""}
-            onClick={() => setFilter(cat)}
-          >
-            {cat === "mobile" ? "Mobile App" : cat.toUpperCase()}
-          </button>
-        ))}
-      </div>
-
       {/* GRID */}
       <div className="portfolio-grid">
         {filtered.map((item) => (
@@ -96,7 +53,7 @@ export default function Portfolio() {
             </span>
 
             <Image
-              src={item.image[0]} // 
+              src={item.images[0]}
               alt={item.title}
               width={800}
               height={500}
@@ -107,7 +64,7 @@ export default function Portfolio() {
               <div className="overlay-portfolio-icons">
                 <div
                   className="icon-btn"
-                  onClick={() => openGallery(item.image)}
+                  onClick={() => openGallery(item.images)}
                 >
                   <Search size={17} />
                 </div>

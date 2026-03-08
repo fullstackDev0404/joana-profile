@@ -44,10 +44,10 @@ export default function Contact() {
     setErrors(validationErrors);
 
     if (Object.keys(validationErrors).length > 0) {
-      return; // ❌ 검증 실패면 여기서 종료
+      return;
     }
 
-    const mailtoLink = `mailto:yourmail@example.com?subject=${encodeURIComponent(
+    const mailtoLink = `mailto:joanak_dev@outlook.com?subject=${encodeURIComponent(
       form.subject
     )}&body=${encodeURIComponent(
       `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`
@@ -69,11 +69,11 @@ export default function Contact() {
                         </div>
                         <div>
                         <h4>Address</h4>
-                        <p>New York, USA</p>
+                        <p>Turku, Finland</p>
                     </div>
                 </div>
 
-                <div className="info-item">
+                {/* <div className="info-item">
                     <div className="icon-box">
                         <Phone size={20} />
                     </div>
@@ -81,7 +81,7 @@ export default function Contact() {
                         <h4>Call Us</h4>
                         <p>+1 123 456 7890</p>
                     </div>
-                </div>
+                </div> */}
 
                 <div className="info-item">
                     <div className="icon-box">
@@ -89,7 +89,7 @@ export default function Contact() {
                     </div>
                     <div>
                         <h4>Email Us</h4>
-                        <p>yourmail@example.com</p>
+                        <p>joanak_dev@outlook.com</p>
                     </div>
                 </div>
             </div>
@@ -100,11 +100,11 @@ export default function Contact() {
                 <div className="form-row">
                 <div className="form-group">
                     <input
-                    type="text"
-                    placeholder="Your Name"
-                    onChange={(e) =>
-                        setForm({ ...form, name: e.target.value })
-                    }
+                        type="text"
+                        placeholder="Your Name"
+                        onChange={(e) =>
+                            setForm({ ...form, name: e.target.value })
+                        }
                     />
                     {errors.name && <span className="error">{errors.name}</span>}
                 </div>
