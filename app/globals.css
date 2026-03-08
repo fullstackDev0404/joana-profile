@@ -918,6 +918,7 @@ button:hover {
 
 
 /* Resume btn */
+
 .top-bar {
   position: absolute;
   top: 30px;
@@ -940,6 +941,7 @@ button:hover {
 }
 
 /* Skill section */
+
 .skill-category {
   background: #ffffff;
   padding: 24px;
@@ -958,6 +960,7 @@ button:hover {
 }
 
 /* Common */
+
 .pt-10 {
   padding-top: 10px;
 }
