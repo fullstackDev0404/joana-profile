@@ -35,11 +35,11 @@ export default function Resume() {
 
                 <li>
                   <a
-                    href="https://github.com/joana0713"
+                    href="https://github.com/fullstackDev0404"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    github.com/joana0713
+                    github.com/fullstackDev0404
                   </a>
                 </li>
               </ul>
